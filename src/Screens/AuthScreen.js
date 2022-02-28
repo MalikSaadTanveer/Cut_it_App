@@ -7,6 +7,7 @@ import {
   Dimensions,
   Image,
   Pressable,
+  ScrollView,
 } from 'react-native';
 import colors from '../constants/colors';
 import fonts from '../constants/fonts';
@@ -23,7 +24,6 @@ const AuthScreen = ({navigation}) => {
   const [isBtnActive, setIsBtnActive] = useState(1)
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Text style={styles.logoText}>Cut It</Text> */}
       <View style={styles.logoContainer}>
       <Image source={require('../../assets/images/light-logo.png')} 
       resizeMode="contain"
@@ -63,6 +63,11 @@ const styles = ScaledSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: colors.background,
+  },
+  innerContainer: {
+    width: Dimensions.WIDTH,
+    padding: '12@s',
+    backgroundColor:'blue'
   },
 
   logoText: {

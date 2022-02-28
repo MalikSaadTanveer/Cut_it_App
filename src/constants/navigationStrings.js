@@ -7,4 +7,9 @@ export default {
     Search:'Search',
     Settings:'Settings',
     Tab:'Tab',
+    EditProfile:'EditProfile',
+    ChangePassword:'ChangePassword',
+    FeedbackAndSupport:'FeedbackAndSupport',
+    PaymentMethod:'PaymentMethod',
+    SettingStack:'SettingStack',
 }

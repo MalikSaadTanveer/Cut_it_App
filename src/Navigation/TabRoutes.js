@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { ScaledSheet } from 'react-native-size-matters';
-
+import SettingStack from './SettingStack'
 const Tab = createBottomTabNavigator();
 
 const TabRoutes = () => {
@@ -21,7 +21,8 @@ const TabRoutes = () => {
             tabBarStyle:{
                 backgroundColor:colors.background,
                 borderTopColor:colors.main,
-                borderTopWidth:1
+                borderTopWidth:1,
+                
             }
             }} 
             >

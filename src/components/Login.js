@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, Dimensions} from 'react-native';
+import React, {useState,useEffect} from 'react';
+import {View, Text, TextInput, Dimensions,Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {ScaledSheet} from 'react-native-size-matters';
 import colors from '../constants/colors';
@@ -11,6 +11,14 @@ import * as Animatable from 'react-native-animatable';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const Login = ({navigation}) => {
+  useEffect(() => {
+    const keyboardHide = Keyboard.addListener('keyboardDidHide', () => {
+        Keyboard.dismiss();
+    });
+    return () => {
+        keyboardHide.remove()
+    }
+}, []);
   const [borders, setBorders] = useState({
     Email: false,
     Password: false,
@@ -84,6 +92,10 @@ const Login = ({navigation}) => {
         </View>
         <CustomButton text="Log in" onPress={handleLogin}/>
         <Text style={styles.forgot}>Forgot Password?</Text>
+        <CustomButton text=" Login with Apple" onPress={handleLogin} iconTag='AntDesign' iconName="apple-o" color="grey"/>
+        <CustomButton text="Login with Google" onPress={handleLogin} iconTag='AntDesign' iconName="google" color="#4285F4"/>
+        <CustomButton text="Login with Facebook" onPress={handleLogin} iconTag='Feather' iconName="facebook" color="#3b5998"/>
+
       </Animatable.View>
     </>
   );

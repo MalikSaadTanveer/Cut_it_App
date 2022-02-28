@@ -15,7 +15,8 @@ import Dimensions from '../constants/Dimensions';
 import fonts from '../constants/fonts';
 import settingsList from '../constants/settingsList';
 
-const Settings = () => {
+const Settings = ({navigation}) => {
+
   return (
     <SafeAreaView style={styles.container}>
       <Header leftText="Settings" rightText="log out" />
@@ -27,7 +28,8 @@ const Settings = () => {
           <View key={element.index} style={styles.innerContiner}>
             <Text style={styles.innerTitle}>{element.item.title}</Text>
             {element.item.box.map((item,i) => (
-              <TouchableOpacity key={i} style={styles.innerBox}>
+              <TouchableOpacity key={i} style={styles.innerBox} 
+                onPress={()=>{item.navigation && navigation.navigate(item.navigation,item.data&& item.data)}} >
                 <CustomIcons
                   tag={item.tag}
                   name={item.name}

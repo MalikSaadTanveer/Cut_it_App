@@ -37,16 +37,15 @@ const styles = ScaledSheet.create({
     height: Dimensions.HEIGHT * 0.3,
     position: 'relative',
     marginVertical: '20@s',
-    // backgroundColor:'red',
     justifyContent: 'center',
     alignItems: 'center',
+    // backgroundColor:'blue'
   },
   overlay: {
     width: Dimensions.WIDTH,
     height: Dimensions.HEIGHT * 0.3,
     position: 'absolute',
     zIndex: 1,
-    // backgroundColor: 'rgba(0,0,0,0.5)',
   },
   backgroundImage: {
     width: Dimensions.WIDTH,
@@ -56,18 +55,17 @@ const styles = ScaledSheet.create({
     position: 'absolute',
     zIndex: 2,
     alignItems: 'center',
-    // backgroundColor: 'green',
   },
   modalImage: {
     width: '120@s',
     height: '120@s',
     borderRadius: '60@s',
     backgroundColor: colors.black,
-    marginTop:'40@s'
+    // marginTop:'40@s'
   },
   modalText: {
     fontSize: '20@s',
-    marginTop: '30@s',
+    marginTop: '20@s',
     fontFamily: fonts.GothamBold,
     color: colors.white,
   },

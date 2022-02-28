@@ -1,3 +1,5 @@
+import navigationStrings from "./navigationStrings";
+
 export default [
   {
     title: 'Account',
@@ -6,11 +8,13 @@ export default [
         tag: 'Ionicons',
         name: 'person-outline',
         text: 'Edit Account',
+        navigation:navigationStrings.EditProfile,
       },
       {
         tag: 'Entypo',
         name: 'key',
         text: 'Change Password',
+        navigation:navigationStrings.ChangePassword,
       },
     ],
   },
@@ -36,11 +40,19 @@ export default [
         tag: 'Ionicons',
         name: 'ios-mail-open-outline',
         text: 'Send Feedback',
+        navigation:navigationStrings.FeedbackAndSupport,
+        data:{
+          header:'feedback', email:'cutit@feedback.co', placeholder:'Feedback'
+        }
       },
       {
         tag: 'MaterialIcons',
         name: 'support-agent',
         text: 'Support',
+        navigation:navigationStrings.FeedbackAndSupport,
+        data:{
+          header:'support', email:'cutit@support.co', placeholder:'Support'
+        }
       },
     ],
   },
@@ -51,6 +63,7 @@ export default [
         tag: 'AntDesign',
         name: 'creditcard',
         text: 'Payment Method',
+        navigation:navigationStrings.PaymentMethod,
       },
     ],
   },

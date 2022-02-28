@@ -10,11 +10,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 // create a component
-const Header = ({leftText, rightText, icon, backIcon}) => {
+const Header = ({leftText, rightText, icon, backIcon,onPress}) => {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>          
-        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon}/>}
+        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon} onPress={onPress}/>}
         {leftText && <Text style={styles.headerText}>{leftText}</Text>}
       </View>
       <View style={styles.inner}>          
@@ -36,7 +36,8 @@ const styles = ScaledSheet.create({
     flexDirection:'row'
   },
   inner:{
-    flexDirection:'row'  
+    flexDirection:'row',
+    alignItems: 'center',  
   },
   headerText: {
     color: colors.white,
@@ -46,7 +47,7 @@ const styles = ScaledSheet.create({
   }, 
   rightText: {
     color: colors.main,
-    fontSize: '16@s',
+    fontSize: '14@s',
     fontFamily: fonts.GothamBold,
     textTransform:'uppercase'
 
@@ -57,8 +58,8 @@ const styles = ScaledSheet.create({
     marginLeft:'10@s'
   },
   backIcon:{
-    color: colors.black,
-    fontSize: '20@s',
+    color: colors.white,
+    fontSize: '24@s',
     marginRight:'10@s'
   }
 });
