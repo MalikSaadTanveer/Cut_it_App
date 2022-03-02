@@ -10,16 +10,16 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 // create a component
-const Header = ({leftText, rightText, icon, backIcon,onPress}) => {
+const Header = ({leftText, rightText, icon, backIcon,onPress,rightPress,iconPress}) => {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>          
-        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon} onPress={onPress}/>}
+        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon} onPress={onPress} />}
         {leftText && <Text style={styles.headerText}>{leftText}</Text>}
       </View>
       <View style={styles.inner}>          
-        {rightText && <Text style={styles.rightText}>{rightText}</Text> }
-        {icon && <Ionicons name="notifications-outline" style={styles.iconStyle}/> }
+        {rightText && <Text style={styles.rightText} onPress={rightPress} >{rightText}</Text> }
+        {icon && <Ionicons name="notifications-outline" style={styles.iconStyle} onPress={iconPress} /> }
       </View>
     </View>
   );

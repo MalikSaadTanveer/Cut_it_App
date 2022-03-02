@@ -86,6 +86,7 @@ const ChangePassword = ({navigation}) => {
             selectionColor={colors.main}
             value={data.CurrentPassword}
             onChangeText={text => handleData('CurrentPassword', text)}
+            secureTextEntry={true}
           />
         </View>
        
@@ -102,6 +103,7 @@ const ChangePassword = ({navigation}) => {
             selectionColor={colors.main}
             value={data.NewPassword}
             onChangeText={text => handleData('NewPassword', text)}
+            secureTextEntry={true}
           />
         </View>
         
@@ -118,6 +120,7 @@ const ChangePassword = ({navigation}) => {
             selectionColor={colors.main}
             value={data.ConfirmPassword}
             onChangeText={text => handleData('ConfirmPassword', text)}
+            secureTextEntry={true}
           />
         </View>
       </View>

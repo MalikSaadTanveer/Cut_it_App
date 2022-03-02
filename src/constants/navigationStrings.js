@@ -13,4 +13,6 @@ export default {
     PaymentMethod:'PaymentMethod',
     SettingStack:'SettingStack',
     BarberDetail:'BarberDetail',
+    ConfirmScreen:'ConfirmScreen',
+    OrderPayment:'OrderPayment'
 }

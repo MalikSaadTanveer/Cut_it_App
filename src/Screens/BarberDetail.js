@@ -13,7 +13,7 @@ import ServicesComponent from '../components/ServicesComponent';
 import CustomIcons from '../components/CustomIcons';
 
 // create a component
-const BarberDetail = () => {
+const BarberDetail = ({navigation}) => {
   const [isActive, setIsActive] = useState({
     info: true,
     booking: false,
@@ -85,7 +85,7 @@ const BarberDetail = () => {
       </View>
 
       {(isActive.info && <InfoComponent />) ||
-        (isActive.booking && <BookingComponent />) ||
+        (isActive.booking && <BookingComponent navigation = {navigation} />) ||
         (isActive.reviews && <ReviwesComponents />) ||
         (isActive.services && <ServicesComponent />)}
     </SafeAreaView>

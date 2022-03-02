@@ -22,8 +22,8 @@ const BookNowButton = ({text,onPress,color,iconTag,iconName}) => {
 const styles = ScaledSheet.create({
     container: {
         width: Dimensions.WIDTH,
-        position: 'absolute',
-        bottom:0,
+        // position: 'absolute',
+        // bottom:0,
     },
     btn:{
         paddingVertical:'16@s',

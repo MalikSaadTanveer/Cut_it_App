@@ -10,7 +10,9 @@ import {
   ChangePassword,
   FeedbackAndSupport,
   PaymentMethod,
-  BarberDetail
+  BarberDetail,
+  ConfirmScreen,
+  OrderPayment
 } from '../Screens';
 import TabRoutes from './TabRoutes';
 
@@ -44,6 +46,14 @@ const Routes = () => {
         <Stack.Screen
           name={navigationStrings.BarberDetail}
           component={BarberDetail}
+        />
+        <Stack.Screen
+          name={navigationStrings.ConfirmScreen}
+          component={ConfirmScreen}
+        />
+        <Stack.Screen
+          name={navigationStrings.OrderPayment}
+          component={OrderPayment}
         />
       </Stack.Navigator>
     </NavigationContainer>

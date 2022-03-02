@@ -1,6 +1,6 @@
 //import liraries
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, FlatList,TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image, FlatList,TouchableOpacity, Pressable} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import colors from '../constants/colors';
 import Dimensions from '../constants/Dimensions';
@@ -18,7 +18,7 @@ const SearchCard = ({navigation}) => {
         numColumns={2}
         style={styles.flatList}
         renderItem={element => (
-          <TouchableOpacity key={element.index} style={styles.card} onPress={() => navigation.navigate(navigationStrings.BarberDetail)}>
+          <Pressable key={element.index} style={styles.card} onPress={() => navigation.navigate(navigationStrings.BarberDetail)}>
             <View style={styles.cardPrice}>
               <Text style={styles.cardPriceText}>{element.item.price}</Text>
             </View>
@@ -45,7 +45,7 @@ const SearchCard = ({navigation}) => {
                 </View>
               </View>
             </View>
-          </TouchableOpacity>
+          </Pressable>
         )}
       />
     </View>
@@ -100,12 +100,14 @@ const styles = ScaledSheet.create({
     paddingHorizontal: '4@s',
     paddingVertical: '4@s',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: 'rgba(0,0,0,0.8)',
     // backgroundColor: 'red',
     borderBottomLeftRadius:'10@s',
     borderBottomRightRadius:'10@s',
-    borderTopColor:colors.main,
-    borderTopWidth:2
+    // borderTopColor:'transparent',
+    // borderTopWidth:2,
+    borderColor:colors.main,
+    borderWidth:2,
   },
   descName: {
     fontFamily: fonts.GothamBold,
@@ -120,11 +122,11 @@ const styles = ScaledSheet.create({
   cardBottomText:{
     marginRight:'2@s',
     fontFamily:fonts.GothamBook,
-    color:'rgb(253, 204, 13)',
+    color:colors.rating,
     fontSize:'10@s',
   },
   stars:{
-    color:'rgb(253, 204, 13)',
+    color:colors.rating,
   },
   cardBottomLeft:{
     flexDirection: 'row',

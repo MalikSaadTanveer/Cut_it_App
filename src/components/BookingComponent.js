@@ -13,9 +13,10 @@ import ServicesComponent from './ServicesComponent';
 import TimeSlots from './TimeSlots';
 import BookNowButton from './BookNowButton';
 import LinearGradient from 'react-native-linear-gradient';
+import navigationStrings from '../constants/navigationStrings';
 // import LinearGradient from 'react-native-linear-gradient';
 // create a component
-const BookingComponent = () => {
+const BookingComponent = ({navigation}) => {
   const month = [
     'January',
     'February',
@@ -38,8 +39,7 @@ const BookingComponent = () => {
     date: new Date().getDate(),
     day: dayName[new Date().getDay()],
   });
-  //   const [dayArray, setdayArray] = useState([])
-  // useEffect(() => {}, []);
+  
   const showDatePicker = () => {
     setDatePickerVisibility(true);
   };
@@ -62,7 +62,7 @@ const BookingComponent = () => {
     <Animatable.View animation="slideInUp" style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
       <Pressable onPress={showDatePicker}>
-        <LinearGradient style={styles.inner}  colors={colors.gradient2}
+        <LinearGradient style={styles.inner}  colors={colors.gradient3}
             start={{x: 0.1, y: 0.1}}
             end={{x: 0.1, y: 1}}>
           {/* <View style={styles.month}>
@@ -113,6 +113,7 @@ const BookingComponent = () => {
         </Pressable>
         <TimeSlots />
         <ServicesComponent />
+      <BookNowButton text="Book Now" onPress={()=>navigation.navigate(navigationStrings.ConfirmScreen)}/>
       </ScrollView>
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
@@ -122,7 +123,6 @@ const BookingComponent = () => {
         }}
         onCancel={hideDatePicker}
       />
-      <BookNowButton text="Book Now" />
     </Animatable.View>
   );
 };
@@ -134,7 +134,6 @@ const styles = ScaledSheet.create({
     backgroundColor: colors.background,
     width: Dimensions.WIDTH,
     position: 'relative',
-    paddingBottom: '50@s',
   },
   inner: {
     paddingHorizontal: '12@s',

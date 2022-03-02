@@ -49,7 +49,7 @@ const ReviwesComponents = () => {
   ];
   return (
     <Animatable.View animation="slideInUp" style={styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.inner}>
           <View style={styles.row}>
             <View style={styles.rowLeft}>
