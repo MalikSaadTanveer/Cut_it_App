@@ -9,12 +9,12 @@ import Dimensions from '../constants/Dimensions'
 import fonts from '../constants/fonts';
 
 
-const Search = () => {
+const Search = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
             <SearchBar/>
             <Text style={styles.searchHeader}>Search Results</Text>
-            <SearchCard/>
+            <SearchCard navigation={navigation} />
         </SafeAreaView>
     );
 };

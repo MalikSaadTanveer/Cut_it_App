@@ -18,7 +18,10 @@ const Home = () => {
             <Header leftText="Home" icon />
             
 
-            <DashboardIamgeComponent/>
+            <DashboardIamgeComponent mainImage={require('../../assets/images/light-logo.png')} 
+                modalImage={require('../../assets/images/dashboard1.jpg')}
+                home
+            />
             
             <DashboardSlides 
                 title="My Barbers" desc="Find Barbers" icon={0}

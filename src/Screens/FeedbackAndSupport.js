@@ -27,7 +27,7 @@ const FeedbackAndSupport = ({navigation,route}) => {
       });
     
       const [data, setData] = useState({
-        Email: 'sahbg777@gmail.com',
+        Email: 'sample@maniwebify.com',
         Feedback:''
       });
       const handleFocus = name => {

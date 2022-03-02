@@ -122,7 +122,6 @@ const styles = ScaledSheet.create({
     height: HEIGHT * 0.4,
     width: WIDTH,
     position: 'absolute',
-    // backgroundColor: 'rgba(0,0,0,0.6)',
     zIndex: 1,
   },
   bottomImg: {

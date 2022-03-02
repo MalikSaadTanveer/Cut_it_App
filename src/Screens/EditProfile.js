@@ -37,7 +37,7 @@ const EditProfile = ({navigation}) => {
 
   const [data, setData] = useState({
     Name: 'Malik Saad',
-    Email: 'sahbg777@gmail.com',
+    Email: 'sample@maniwebify.com',
     Phone: '+123456789',
   });
   const handleFocus = name => {

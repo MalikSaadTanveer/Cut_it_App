@@ -12,4 +12,5 @@ export default {
     FeedbackAndSupport:'FeedbackAndSupport',
     PaymentMethod:'PaymentMethod',
     SettingStack:'SettingStack',
+    BarberDetail:'BarberDetail',
 }

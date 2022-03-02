@@ -8,20 +8,20 @@ import Dimensions from '../constants/Dimensions';
 import fonts from '../constants/fonts';
 
 // create a component
-const DashboardIamgeComponent = () => {
+const DashboardIamgeComponent = ({mainImage,modalImage,home}) => {
   return (
     <View style={styles.container}>
       <LinearGradient
         colors={colors.gradient2}
         style={styles.overlay}></LinearGradient>
       <Image
-        source={require('../../assets/images/light-logo.png')}
+        source={mainImage}
         style={styles.backgroundImage}
-        resizeMode="contain"
+        resizeMode={home ? "contain":'cover'}
       />
       <View style={styles.innerView}>
           <Image
-            source={require('../../assets/images/dashboard1.jpg')}
+            source={modalImage}
             style={styles.modalImage}
           />
         <Text style={styles.modalText}>Malik Saad</Text>
@@ -36,16 +36,16 @@ const styles = ScaledSheet.create({
     width: Dimensions.WIDTH,
     height: Dimensions.HEIGHT * 0.3,
     position: 'relative',
-    marginVertical: '20@s',
+    marginBottom: '20@s',
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor:'blue'
   },
   overlay: {
     width: Dimensions.WIDTH,
     height: Dimensions.HEIGHT * 0.3,
     position: 'absolute',
     zIndex: 1,
+    
   },
   backgroundImage: {
     width: Dimensions.WIDTH,
@@ -65,7 +65,7 @@ const styles = ScaledSheet.create({
   },
   modalText: {
     fontSize: '20@s',
-    marginTop: '20@s',
+    marginTop: '10@s',
     fontFamily: fonts.GothamBold,
     color: colors.white,
   },

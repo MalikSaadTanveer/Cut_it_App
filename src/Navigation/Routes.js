@@ -10,9 +10,9 @@ import {
   ChangePassword,
   FeedbackAndSupport,
   PaymentMethod,
+  BarberDetail
 } from '../Screens';
 import TabRoutes from './TabRoutes';
-import SettingStack from './SettingStack';
 
 const Stack = createNativeStackNavigator();
 const Routes = () => {
@@ -40,6 +40,10 @@ const Routes = () => {
         <Stack.Screen
           name={navigationStrings.PaymentMethod}
           component={PaymentMethod}
+        />
+        <Stack.Screen
+          name={navigationStrings.BarberDetail}
+          component={BarberDetail}
         />
       </Stack.Navigator>
     </NavigationContainer>

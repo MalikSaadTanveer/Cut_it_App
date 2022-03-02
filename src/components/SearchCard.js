@@ -5,11 +5,12 @@ import {ScaledSheet} from 'react-native-size-matters';
 import colors from '../constants/colors';
 import Dimensions from '../constants/Dimensions';
 import fonts from '../constants/fonts';
+import navigationStrings from '../constants/navigationStrings';
 import SearchList from '../constants/SearchList';
 import CustomIcons from './CustomIcons';
 
 // create a component
-const SearchCard = () => {
+const SearchCard = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -17,7 +18,7 @@ const SearchCard = () => {
         numColumns={2}
         style={styles.flatList}
         renderItem={element => (
-          <TouchableOpacity key={element.index} style={styles.card}>
+          <TouchableOpacity key={element.index} style={styles.card} onPress={() => navigation.navigate(navigationStrings.BarberDetail)}>
             <View style={styles.cardPrice}>
               <Text style={styles.cardPriceText}>{element.item.price}</Text>
             </View>
@@ -87,6 +88,7 @@ const styles = ScaledSheet.create({
     width: Dimensions.WIDTH * 0.46,
     height: Dimensions.WIDTH * 0.46,
     margin: Dimensions.WIDTH * 0.004,
+    borderRadius:'10@s'
   },
   descContainer: {
     width: Dimensions.WIDTH * 0.46,
@@ -99,8 +101,11 @@ const styles = ScaledSheet.create({
     paddingVertical: '4@s',
     justifyContent: 'space-between',
     backgroundColor: 'rgba(0,0,0,0.6)',
+    // backgroundColor: 'red',
+    borderBottomLeftRadius:'10@s',
+    borderBottomRightRadius:'10@s',
     borderTopColor:colors.main,
-    borderWidth:2
+    borderTopWidth:2
   },
   descName: {
     fontFamily: fonts.GothamBold,
