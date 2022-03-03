@@ -14,12 +14,12 @@ const Header = ({leftText, rightText, icon, backIcon,onPress,rightPress,iconPres
   return (
     <View style={styles.container}>
       <View style={styles.inner}>          
-        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon} onPress={onPress} />}
+        {backIcon && <MaterialIcons name="keyboard-backspace" style={styles.backIcon} onPress={onPress && onPress} />}
         {leftText && <Text style={styles.headerText}>{leftText}</Text>}
       </View>
       <View style={styles.inner}>          
-        {rightText && <Text style={styles.rightText} onPress={rightPress} >{rightText}</Text> }
-        {icon && <Ionicons name="notifications-outline" style={styles.iconStyle} onPress={iconPress} /> }
+        {rightText && <Text style={styles.rightText} onPress={rightPress} >{rightPress && rightText}</Text> }
+        {icon && <Ionicons name="notifications-outline" style={styles.iconStyle} onPress={iconPress && iconPress} /> }
       </View>
     </View>
   );

@@ -65,30 +65,6 @@ const BookingComponent = ({navigation}) => {
         <LinearGradient style={styles.inner}  colors={colors.gradient3}
             start={{x: 0.1, y: 0.1}}
             end={{x: 0.1, y: 1}}>
-          {/* <View style={styles.month}>
-            <CustomIcons
-              tag="Ionicons"
-              name="chevron-back"
-              style={styles.monthIcon}
-            />
-            <Text style={styles.monthText}>
-              {monthYear.month}, {monthYear.year}
-            </Text>
-            <CustomIcons
-              tag="Ionicons"
-              name="chevron-forward"
-              style={styles.monthIcon}
-            />
-          </View> */}
-          {/* <View style={styles.month}>
-            {dayName.map((item, i) => (
-              <View key={i} style={styles.daysContainer}>
-                <Text style={styles.dayText}>{item}</Text>
-                <Text style={styles.dateText}>{i+1}</Text>
-              </View>
-            ))}
-
-          </View> */}
           <View style={styles.date}>
             <Text style={styles.dateText}>{monthYear.date}</Text>
             <Text style={styles.day}>{monthYear.day}</Text>
@@ -102,7 +78,7 @@ const BookingComponent = ({navigation}) => {
             />
           </View>
           <View style={styles.year}>
-            <Text style={styles.yearText}>2022</Text>
+            <Text style={styles.yearText}>{monthYear.year}</Text>
             <CustomIcons
               tag="AntDesign"
               name="caretdown"

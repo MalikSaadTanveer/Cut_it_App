@@ -1,6 +1,6 @@
 //import liraries
 import React, {useState,useEffect} from 'react';
-import {View, Text, TextInput,Keyboard} from 'react-native';
+import {View, Text, TextInput,Keyboard, SafeAreaView} from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import Header from '../components/Header';
 import colors from '../constants/colors';
@@ -61,7 +61,7 @@ const ChangePassword = ({navigation}) => {
       };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header
         leftText="Change Password"
         rightText="Save"
@@ -124,7 +124,7 @@ const ChangePassword = ({navigation}) => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

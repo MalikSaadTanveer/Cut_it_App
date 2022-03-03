@@ -15,7 +15,7 @@ import Octicons from 'react-native-vector-icons/Octicons'
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import Zocial from 'react-native-vector-icons/Zocial'
 
-const CustomIcons = ({tag,name,style}) => {
+const CustomIcons = ({tag,name,style,onPress}) => {
     let Icon;
     if(tag == "AntDesign"){
         Icon = <AntDesign name={name} style={style} />
@@ -45,7 +45,7 @@ const CustomIcons = ({tag,name,style}) => {
         Icon = <Foundation name={name} style={style} />
     }
     else if(tag == "Ionicons"){
-        Icon = <Ionicons name={name} style={style} />
+        Icon = <Ionicons name={name} style={style} onPress={onPress && onPress}/>
     }
     else if(tag == "MaterialCommunityIcons"){
         Icon = <MaterialCommunityIcons name={name} style={style} />

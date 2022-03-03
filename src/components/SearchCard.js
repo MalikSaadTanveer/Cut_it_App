@@ -14,6 +14,7 @@ const SearchCard = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={SearchList}
         numColumns={2}
         style={styles.flatList}
@@ -63,6 +64,7 @@ const styles = ScaledSheet.create({
   },
   card: {
     position: 'relative',
+    marginBottom: '10@s',
   },
   cardPrice: {
     position: 'absolute',
@@ -100,7 +102,7 @@ const styles = ScaledSheet.create({
     paddingHorizontal: '4@s',
     paddingVertical: '4@s',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(0,0,0,0.8)',
+    backgroundColor: 'rgba(0,0,0,1)',
     // backgroundColor: 'red',
     borderBottomLeftRadius:'10@s',
     borderBottomRightRadius:'10@s',

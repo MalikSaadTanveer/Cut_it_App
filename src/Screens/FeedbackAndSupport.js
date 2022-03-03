@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {View, Text, TextInput,Keyboard} from 'react-native';
+import {View, Text, TextInput,Keyboard, SafeAreaView} from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import Header from '../components/Header';
 import colors from '../constants/colors';
@@ -55,7 +55,7 @@ const FeedbackAndSupport = ({navigation,route}) => {
         setData(pre => ({...pre, [name]: value}));
       };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header
         leftText={navigationData.header}
         rightText="Send"
@@ -101,7 +101,7 @@ const FeedbackAndSupport = ({navigation,route}) => {
           />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

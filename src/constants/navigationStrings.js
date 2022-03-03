@@ -14,5 +14,7 @@ export default {
     SettingStack:'SettingStack',
     BarberDetail:'BarberDetail',
     ConfirmScreen:'ConfirmScreen',
-    OrderPayment:'OrderPayment'
+    OrderPayment:'OrderPayment',
+    TrackingScreen:'TrackingScreen',
+    Notifications:'Notifications',
 }

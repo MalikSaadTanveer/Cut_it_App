@@ -52,7 +52,7 @@ const ServicesComponent = () => {
       <View style={styles.inner}>
         {services.map((item, i) => (
           <Pressable key={i} style={styles.card} onPress={()=>handleClick(i)}>
-          <View style={[styles.design,{backgroundColor:selected == i?colors.main:'grey' }]}></View>
+          <View style={[styles.design,{backgroundColor:selected == i?colors.main:colors.grey }]}></View>
             <View style={styles.cardLeft}>
                 <Text style={styles.cardLeftTitle}>{item.name}</Text>
                 <Text style={styles.cardLeftDuration}>{item.duration}</Text>

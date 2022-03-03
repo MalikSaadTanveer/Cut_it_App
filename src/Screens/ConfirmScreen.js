@@ -8,6 +8,7 @@ import {
   Image,
   ScrollView,
   Pressable,
+  SafeAreaView,
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import CustomIcons from '../components/CustomIcons';
@@ -62,7 +63,7 @@ const ConfirmScreen = ({navigation}) => {
     setData(pre => ({...pre, [name]: value}));
   };
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header
         backIcon
         leftText="Confirm & Review"
@@ -130,7 +131,7 @@ const ConfirmScreen = ({navigation}) => {
         <Text style={styles.bottomText}>Total Payable</Text>
         <Text style={styles.bottomPrice}>$40</Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
