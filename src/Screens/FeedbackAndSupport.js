@@ -64,13 +64,14 @@ const FeedbackAndSupport = ({navigation,route}) => {
       />
       <View style={styles.innerContainer}>
         <View style={styles.description}>
-            <Text>You can send us your {navigationData.header=='feedback'? navigationData.header : navigationData.header + ' request'} here, or email us directly at <Text style={styles.companyEmail}>{navigationData.email}.</Text></Text>
+            <Text style={{color:colors.lightGrey}}>You can send us your {navigationData.header=='feedback'? navigationData.header : navigationData.header + ' request'} here, or email us directly at <Text style={styles.companyEmail}>{navigationData.email}.</Text></Text>
         </View>
 
         <View style={styles.textContainers}>
           {(borders.Email || data.Email.length>0) && <Text style={styles.focusedText}>Email</Text>}
           <TextInput
             placeholder={placeholder.Email}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.Email ? colors.main : 'transparent'},
@@ -86,6 +87,8 @@ const FeedbackAndSupport = ({navigation,route}) => {
         {(borders.Feedback || data.Feedback.length>0) && <Text style={styles.focusedText}>Feedback</Text>}
           <TextInput
             placeholder={placeholder.Feedback}
+            placeholderTextColor={colors.lightGrey}
+
             style={[
               styles.inputText,
               {borderBottomColor: borders.Feedback ? colors.main : 'transparent'},
@@ -144,6 +147,7 @@ const styles = ScaledSheet.create({
         marginTop: '-10@s',
         paddingBottom: '-10@s',
         borderBottomWidth: '1@s',
+        color:colors.white
       },
 });
 

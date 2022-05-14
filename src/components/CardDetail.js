@@ -71,6 +71,7 @@ const CardDetail = () => {
           )}
           <TextInput
             placeholder={placeholder.name}
+            placeholderTextColor={colors.lightGrey}
             style={[styles.inputText, borders.name && styles.activeInputText]}
             onFocus={() => handleFocus('name')}
             onBlur={() => handleBlur('name', "Card Holder's Name")}
@@ -86,6 +87,7 @@ const CardDetail = () => {
           )}
           <TextInput
             placeholder={placeholder.number}
+            placeholderTextColor={colors.lightGrey}
             style={[styles.inputText, borders.number && styles.activeInputText]}
             onFocus={() => handleFocus('number')}
             onBlur={() => handleBlur('number', 'Card Number')}
@@ -102,6 +104,7 @@ const CardDetail = () => {
             )}
             <TextInput
               placeholder={placeholder.expiry}
+              placeholderTextColor={colors.lightGrey}
               style={[
                 styles.inputText,styles.expiry,
                 borders.expiry && styles.activeInputText,
@@ -120,6 +123,7 @@ const CardDetail = () => {
             )}
             <TextInput
               placeholder={placeholder.cvv}
+              placeholderTextColor={colors.lightGrey}
               style={[
                 styles.inputText,styles.cvv,
                borders.cvv && styles.activeInputText]}
@@ -175,6 +179,7 @@ const styles = ScaledSheet.create({
     paddingBottom: '-10@s',
     borderBottomColor: colors.grey,
     borderBottomWidth: '1@s',
+    color: colors.white
   },
   activeInputText: {
     borderBottomColor: colors.main,

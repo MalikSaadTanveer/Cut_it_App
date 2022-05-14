@@ -86,6 +86,7 @@ const EditProfile = ({navigation}) => {
           <Text style={styles.focusedText}>Name</Text>
           <TextInput
             placeholder={placeholder.Name}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.Name ? colors.main : 'transparent'},
@@ -101,6 +102,7 @@ const EditProfile = ({navigation}) => {
           <Text style={styles.focusedText}>Cell Phone</Text>
           <TextInput
             placeholder={placeholder.Phone}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.Phone ? colors.main : 'transparent'},
@@ -116,6 +118,7 @@ const EditProfile = ({navigation}) => {
           <Text style={styles.focusedText}>Email</Text>
           <TextInput
             placeholder={placeholder.Email}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.Email ? colors.main : 'transparent'},
@@ -175,6 +178,7 @@ const styles = ScaledSheet.create({
     marginTop: '-10@s',
     paddingBottom: '-10@s',
     borderBottomWidth: '1@s',
+    color:'white'
   },
   
 });

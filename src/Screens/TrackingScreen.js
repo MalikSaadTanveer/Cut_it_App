@@ -111,6 +111,7 @@ const TrackingScreen = ({navigation}) => {
       <View style={styles.messageBox}>
         <TextInput
           placeholder="Message..."
+          placeholderTextColor={colors.lightGrey}
           style={styles.messageText}
           selectionColor={colors.main}
           value={data}
@@ -119,7 +120,7 @@ const TrackingScreen = ({navigation}) => {
           }}
         />
         <Pressable style={styles.messageButton} >
-          <CustomIcons tag="Ionicons" name="send" style={styles.sendIcon} onPress={handleMessage}/>
+          <CustomIcons tag="Ionicons" name="send" style={styles.sendIcon} onPress={data ? handleMessage:()=>{}}/>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -239,9 +240,9 @@ const styles = ScaledSheet.create({
     marginTop: '2@s',
   },
   scroll: {
-    // backgroundColor:'red',
     width: Dimensions.WIDTH,
-    padding: '12@s',
+    paddingHorizontal: '12@s',
+    
   },
   scrollLeft: {
     maxWidth: Dimensions.WIDTH * 0.8,
@@ -253,6 +254,7 @@ const styles = ScaledSheet.create({
     fontFamily: fonts.GothamBold,
     fontSize: '14@s',
     marginBottom: '10@s',
+    color:colors.white
   },
   scrollRight: {
     maxWidth: Dimensions.WIDTH * 0.8,
@@ -263,41 +265,38 @@ const styles = ScaledSheet.create({
     borderRadius: '6@s',
     fontFamily: fonts.GothamBold,
     fontSize: '14@s',
-    marginBottom: '10@s',
+    marginBottom: '4@s',
+    color:colors.white
   },
   messageBox: {
     flexDirection: 'row',
-    //   backgroundColor:'blue',
     width: Dimensions.WIDTH,
     paddingHorizontal: '12@s',
     paddingVertical: '4@s',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: '4@s'
   },
   messageText: {
-    // backgroundColor:'black',
-    // borderBottomColor: colors.main,
-    // borderBottomWidth:1,
+    
     width: Dimensions.WIDTH * 0.8,
     paddingLeft: '6@s',
-    // paddingBottom:'-6@s',
     fontSize: '16@s',
     fontFamily: fonts.GothamBold,
     backgroundColor: colors.secondary,
     borderRadius: '10@s',
+    color:colors.white
   },
   messageButton: {
-    // backgroundColor:colors.main,
     width: Dimensions.WIDTH * 0.14,
     paddingVertical: '4@s',
     alignItems: 'center',
-    // paddingTop:'8@s',
-    // backgroundColor: colors.main,
-    borderRadius: '50@s',
+    borderRadius: '2@s',
     padding: '4@s',
+
   },
   sendIcon: {
-    fontSize: '24@s',
+    fontSize: '26@s',
     color: colors.main,
   },
 });

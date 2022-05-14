@@ -23,6 +23,7 @@ const SearchBar = () => {
                 <TextInput placeholder="Barbers - Current Location" 
                 style={styles.inputText}
                 selectionColor={colors.main}
+                placeholderTextColor={colors.lightGrey}
                 />
                 <TouchableOpacity style={styles.iconContainer}>
                 <CustomIcons tag="AntDesign" name="search1" style={styles.icon}/>

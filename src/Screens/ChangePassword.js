@@ -77,6 +77,7 @@ const ChangePassword = ({navigation}) => {
           }
           <TextInput
             placeholder={placeholder.CurrentPassword}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.CurrentPassword ? colors.main : 'transparent'},
@@ -94,6 +95,7 @@ const ChangePassword = ({navigation}) => {
           {(borders.NewPassword || data.NewPassword.length>0) && <Text style={styles.focusedText}>New Password</Text>}
           <TextInput
             placeholder={placeholder.NewPassword}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.NewPassword ? colors.main : 'transparent'},
@@ -111,6 +113,7 @@ const ChangePassword = ({navigation}) => {
           {(borders.ConfirmPassword || data.ConfirmPassword.length>0)&& <Text style={styles.focusedText}>Confirm New Password</Text>}
           <TextInput
             placeholder={placeholder.ConfirmPassword}
+            placeholderTextColor={colors.lightGrey}
             style={[
               styles.inputText,
               {borderBottomColor: borders.ConfirmPassword ? colors.main : 'transparent'},
@@ -158,6 +161,7 @@ const styles = ScaledSheet.create({
     marginTop: '-10@s',
     paddingBottom: '-10@s',
     borderBottomWidth: '1@s',
+    color:colors.white
   },
 });
 

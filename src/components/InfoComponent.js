@@ -15,7 +15,7 @@ const InfoComponent = () => {
       <ScrollView style={styles.inner} showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>Info</Text>
         <Text style={styles.infoDesc}>
-          if you look good, you'll feel good. Look and feel good with great
+          If you look good, you'll feel good. Look and feel good with great
           haircut!
         </Text>
         <View style={styles.contactContainer}>

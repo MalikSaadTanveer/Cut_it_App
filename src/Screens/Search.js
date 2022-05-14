@@ -30,7 +30,8 @@ const styles = ScaledSheet.create({
         width:Dimensions.WIDTH,
         padding:'12@s',
         fontSize:'16@s',
-        fontFamily: fonts.GothamBold
+        fontFamily: fonts.GothamBold,
+        color:colors.white
     }
 });
 

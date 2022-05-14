@@ -172,6 +172,7 @@ const styles = ScaledSheet.create({
   rowLeftText: {
     fontSize: '14@s',
     fontFamily: fonts.GothamBold,
+    color:colors.white
   },
   rowLeftIcon: {
     marginTop: '2@s',
@@ -197,6 +198,7 @@ const styles = ScaledSheet.create({
     fontSize: '14@s',
     fontFamily: fonts.GothamBold,
     width: '16%',
+    color: colors.white
   },
   rowMidInner1: {
     width: '85%',

@@ -148,6 +148,7 @@ const styles = ScaledSheet.create({
     marginTop: '8@s',
     fontFamily: fonts.GothamBold,
     textTransform: 'uppercase',
+    color:colors.lightGrey
   },
   activeTab: {
     borderColor: colors.main,
